@@ -82,6 +82,13 @@ celerybeat-schedule
 *.sage.py
 
 # Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
 # Spyder project settings
 .spyderproject
@@ -96,5 +103,5 @@ celerybeat-schedule
 # mypy
 .mypy_cache/
 
-# pycharm bollocks
-/.idea
+# Pycharm bollock
+.idea/ls
