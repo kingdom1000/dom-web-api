@@ -1,5 +1,9 @@
-import sys
+import os, sys
 
-sys.path.append('/var/www/dom-web-api')
+PROJECT_DIR = '/var/www/dom-web-api'
+
+activate_this = os.path.join(PROJECT_DIR, 'venv', 'bin', 'activate_this.py')
+execfile(activate_this, dict(__file__=activate_this))
+sys.path.append(PROJECT_DIR)
 
 from api import app as application
