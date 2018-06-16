@@ -33,5 +33,21 @@ def savantCCOn():
     else:
         return 'Not Auth'
 
+@app.route("/bbc1")
+def savantBbc1():
+    if auth.check(request.data):
+        savantInterface.changeChannel('BBC1')
+        return 'TV on Virgin and BBC1'
+    else:
+        return 'Not Auth'
+
+@app.route("/itv1")
+def savantItv1():
+    if auth.check(request.data):
+        savantInterface.changeChannel('ITV1')
+        return 'TV on Virgin and ITV1'
+    else:
+        return 'Not Auth'
+
 if __name__ == "__main__":
     app.run()
