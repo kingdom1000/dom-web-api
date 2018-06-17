@@ -2,6 +2,7 @@ import urllib2
 
 baseUrl = 'http://dom-home-server.com:12000/servicerequest%20%22Living%20Room%22%20'
 baseUrlChannel = 'http://dom-home-server.com:12000/writestate%20userDefined.RequestedChannel%20'
+baseUrlChannelNumeric = 'http://dom-home-server.com:12000/writestate%20userDefined.RequestedChannelNumber%20'
 
 #Off
 offURL = '%22%22%20%22%22%20%22%22%20%22%22%20PowerOff'
@@ -34,4 +35,7 @@ def virginOn():
     contents = urllib2.urlopen(baseUrl + virgin).read()
 
 def changeChannel(channel):
-    contents = urlicontents = urllib2.urlopen(baseUrlChannel + channel).read()
+    contents = urllib2.urlopen(baseUrlChannel + channel).read()
+
+def changeChannelNumeric(channel):
+    contents = urllib2.urlopen(baseUrlChannelNumeric + channel).read()

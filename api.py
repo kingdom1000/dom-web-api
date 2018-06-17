@@ -49,5 +49,13 @@ def savantItv1():
     else:
         return 'Not Auth'
 
+@app.route("/channelnumber/<channel>")
+def savantChannelChange(channel):
+    if auth.check(request.data):
+        savantInterface.changeChannelNumeric(channel)
+        return 'Channel changed to ' + channel
+    else:
+        return 'Not Auth'
+
 if __name__ == "__main__":
     app.run()
